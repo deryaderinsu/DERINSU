@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>derinsu</title>
+<meta name="theme-color" content="#ff7eb6">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fff3f8;--card:#fff;--ink:#4a3560;--mut:#a08ab5;--acc:#ff7eb6;--acc2:#ffe3f1;--acc3:#e6dcff;--mint:#d4f7ea;--line:#ffd0e6;--red:#ff5c8a;--ok:#46c79a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -199,6 +204,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b
  else if(a==='al-off'){stopRing()}
 });
 render();tick();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
 </html>
